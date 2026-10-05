@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <link rel="icon" type="image/png" href="画面ヨミ.png">
+  <link rel="icon" type="image/png" href="icon.png">
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>画面ヨミ - 利用規約・クレジット</title>
   <style>
@@ -201,10 +202,10 @@
 
   <section>
     <h2>クレジット / 使用ライブラリ</h2>
-    <p>画面ヨミ v0.0.1 は、以下のソフトウェア・ライブラリを使用しています。</p>
+    <p>画面ヨミ v0.0.2 は、以下のソフトウェア・ライブラリを使用しています。</p>
 
     <div class="credit">
-      <strong>Electron v33.2.0</strong><br>
+      <strong>Electron v33.4.11</strong><br>
       デスクトップアプリケーション基盤として使用しています。<br>
       <span class="license">License: MIT License</span>
     </div>
@@ -227,16 +228,39 @@
       <span class="license">License: MIT License</span>
     </div>
 
+
+    <div class="credit">
+      <strong>KaTeX v0.19.0</strong><br>
+      数式の表示に使用しています。<br>
+      <span class="license">License: MIT License</span>
+    </div>
+
+    <div class="credit">
+      <strong>pngjs v7.0.0</strong><br>
+      数式OCRの画像処理(PNGの書き出し)に使用しています。<br>
+      <span class="license">License: MIT License</span>
+    </div>
+
     <h3>OCR言語データ</h3>
     <p>
-      本アプリにはTesseract用の日本語（jpn）および英語（eng）の言語データを同梱しています。
-      これらはOCR処理のために使用されます。
+      本アプリにはTesseract用の言語データ（日本語 jpn、日本語縦書き jpn_vert、英語 eng、韓国語 kor、
+      中国語簡体字 chi_sim、ロシア語 rus、フランス語 fra、ドイツ語 deu、スペイン語 spa）を同梱しています。
+      これらはOCR処理のために使用されます（License: Apache License 2.0）。
+    </p>
+
+
+    <h3>外部サービスの利用（翻訳機能）</h3>
+    <p>
+      「日本語以外を自動で日本語に翻訳する」機能を有効にしている場合に限り、OCRした文章を翻訳のために
+      外部の翻訳サービス「MyMemory」（translated.net）へインターネット経由で送信します。
+      初回の利用時に確認画面が表示され、同意しない場合は送信されません。設定からいつでも無効にできます。
+      個人情報・パスワードなどを含む画面の翻訳にはご注意ください。この機能以外で、OCRした内容を外部へ送信することはありません（OCR処理は端末内で行われます）。
     </p>
 
     <h3>開発者</h3>
     <p>
       <strong>画面ヨミ / GamenYomi</strong><br>
-      Version 0.0.1
+      Version 0.0.2
     </p>
     <p class="license">
       ※本ページに記載されたライブラリおよび関連コンポーネントは、それぞれの権利者のライセンス条件に従って利用されています。
@@ -252,7 +276,7 @@
 </main>
 
 <footer>
-  画面ヨミ v0.0.1<br>
+  画面ヨミ v0.0.2<br>
   © 2026 GamenYomi
 </footer>
 </body>
